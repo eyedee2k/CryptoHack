@@ -7,7 +7,7 @@ r = requests.get(f"{url1}/encrypt_flag")
 data = r.json()
 c = data["ciphertext"]
 ciphertext = bytes.fromhex(c)
-with open("/Users/benjamin.brown/Documents/Uni/.venv/CryptoHack/SymmetricCyphers/SymmetricStarter/wordlist.txt") as f:
+with open("/Users/benjamin.brown/Documents/Uni/.venv/CryptoHack/SymmetricCiphers/SymmetricStarter/wordlist.txt") as f:
     words = [w.strip() for w in f.readlines()]
 for i in words:
     key = hashlib.md5(i.encode()).digest()
